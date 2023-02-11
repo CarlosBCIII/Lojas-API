@@ -1,0 +1,23 @@
+{
+  "name": "lojas-api",
+  "version": "1.0.0",
+  "description": "API BACK-END...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosBCIII/Lojas-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlosBCIII/Lojas-API/issues"
+  },
+  "homepage": "https://github.com/CarlosBCIII/Lojas-API#readme",
+  "devDependencies": {
+    "eslint": "^8.34.0"
+  }
+}
