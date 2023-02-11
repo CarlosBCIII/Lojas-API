@@ -8,7 +8,6 @@
         "lint": "eslint --ext .js, .html -f ./node_modules/eslint-friendly-formatter . --fix",
         "prepush": "npm run lint",
         "start": "server.js"
-
     },
     "repository": {
         "type": "git",
