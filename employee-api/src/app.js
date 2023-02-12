@@ -6,7 +6,7 @@
 
  const app = express();
  const index = require('./routes/index');
- // const empregadosRotas = require('./routes/empregados.routes');
+ const empregadosRotas = require('./routes/empregados.routes');
 
  app.use(express.urlencoded({ extended: true }))
  app.use(express.json())
@@ -15,6 +15,6 @@
 
 
  app.use(index)
-     //app.use('/api/', empregadosRotas)
+ app.use('/api/', empregadosRotas)
 
  module.exports = app
