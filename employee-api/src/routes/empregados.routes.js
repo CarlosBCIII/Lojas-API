@@ -26,5 +26,17 @@ router.get('/employees/nome/:nome', empregadosController.listaEmpregadosNome)
 
 router.put('/employees/id/:codigo', empregadosController.atualizaEmpregadosCodigo)
 
+// Rota atualizar por Regsitro :(PUT):localhost:3000/api/employees/registro/
+
+router.put('/employees/registro/:registro', empregadosController.atualizaEmpregadosRegistro)
+
+// Rota deletar por  ID :(PUT):localhost:3000/api/employees/id/
+
+router.delete('/employees/id/:codigo', empregadosController.deletaEmpregadosCodigo)
+
+// Rota deletar por Regsitro :(PUT):localhost:3000/api/employees/registro/
+
+router.delete('/employees/registro/:registro', empregadosController.deletaEmpregadosRegistro)
+
 
 module.exports = router

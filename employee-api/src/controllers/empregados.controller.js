@@ -74,3 +74,20 @@ exports.atualizaEmpregadosRegistro = async(req, res) => {
     res.status(200).send({ message: 'Atualização efetuada com sucesso' })
 
 }
+
+exports.deletaEmpregadosCodigo = async(req, res) => {
+    const empregadoCodigo = req.params.codigo
+
+    await db.query('DELETE FROM empregados WHERE codigo =$1', [empregadoCodigo])
+
+    res.status(200).send({ message: 'Colaborador deletado com sucesso' })
+
+}
+
+exports.deletaEmpregadosRegistro = async(req, res) => {
+    const empregadoRegistro = req.params.registro
+
+    await db.query('DELETE FROM empregados WHERE registro =$1', [empregadoRegistro])
+
+    res.status(200).send({ message: 'Colaborador deletado com sucesso' })
+}
