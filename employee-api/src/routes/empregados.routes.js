@@ -6,5 +6,8 @@ const empregadosController = require('../controllers/empregados.controller')
 
 router.post('/employees', empregadosController.createEmpregado)
 
+// Rota listr todos colaboradores :(GET):localhost:3000/api/employees
+
+router.get('/employees', empregadosController.listaEmpregado)
 
 module.exports = router
