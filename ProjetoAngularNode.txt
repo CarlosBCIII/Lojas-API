@@ -1,0 +1,61 @@
+Classe:
+
+Employee
++employeeId
++nameEmployee
++JobRoleID
++Salary
++InicioContrato
++FinalContato
++EmployeeCódigo
++MetaId
+
+Lojas
++StoreId
++StoreName
++StoreRCKYCode
++Active
+
+Usuarios Lojas
++EmployeeId
++StoreId
+
+Pagamentos
+
+
+User
++mail/username
++pass
+
+git clone https://github.com/CarlosBCIII/Lojas-API.git
+npm init -y
+npx eslint --init
+git add .
+git commit -m "Initial commit."
+git push
+npm i --save-dev husky nodemon
+npm i cors dotenv express express-promise-router pg
+
+Husky verifica se style do codigo esta formatado antes de comitar
+Nodemon não reseta o servidor continuamente
+ESLint verifica codigo e snippet
+
+mudar package.josn no script 
+
+ "dev": "nodemon",
+ "lint": "eslint --ext .js, .html -f ./node_modules/eslint-friendly-formatter . --fix",
+ "prepush": "npm run lint",
+ "start": "server.js"
+habilita a verificação e formatação automarica
+
+criar server.js
+criar pasta src e dentro config,controllers, routes
+
+
+Angular
+
+app-routing -> importa os componetes criados
+
+
+
+

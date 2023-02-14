@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "git": "^0.1.5",
+    "systemjs-plugin-babel": "^0.0.25"
+  },
+  "devDependencies": {
+    "@angular/cli": "^15.1.5",
+    "@angular/core": "^15.1.4"
+  }
+}
