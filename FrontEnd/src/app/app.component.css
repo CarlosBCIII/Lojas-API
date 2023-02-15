@@ -29,6 +29,21 @@
     background-color: #fff;
 }
 
+.navbar{
+  background-color: #392620;
+
+}
+
+.small,.nav2{
+  color: #fff;
+}
+
+.iconNav{
+  color:white;
+}
+
+
+
 
 /* An optional height of the navbar AFTER scroll */
 
