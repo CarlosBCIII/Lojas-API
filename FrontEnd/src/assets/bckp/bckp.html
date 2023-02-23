@@ -1,0 +1,181 @@
+<div *ngIf="false">
+  <div class="petrvs">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" role="button">  <!-- LoPetrvs -->
+                <img [src]="imgCacau1" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                PETRVS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-flex"></div>
+                <div class="btn-group" role="group" aria-label="Janelas">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline-secondary" >
+                            <span class="d-inline-block text-truncate" style="max-width: 150px;">
+                                <i>teste 1</i>
+
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-flex">
+                    <!-- spaccing para quando o menu não aparecer -->
+                </div>
+                <div class="btn-group" role="group" aria-label="Opções">
+                    <!--button *ngFor="let btn of globals.toolbarButtons" type="button" [class.disabled]="btn.running" [class]="'btn ' + (btn.color || 'btn-outline-primary')" (click)="onToolbarButtonClick(btn)" data-bs-toggle="tooltip" data-bs-placement="top" title="{{btn.hint || btn.label || ''}}">
+                        <i nning && btn.icon?.length" [class]="btn.icon"></i>
+                        <div ning" width="25" class="spinner-border spinner-border-sm m-0" role="status">
+                            <span class="visually-hidden"></span>
+                        </div>
+                        {{btn.label || ""}}
+                    </button/-->
+                    <div  class="btn-group" role="group">
+                        <button type="button" aria-expanded="false">
+                            <i></i>
+                        </button>
+                        <button type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                            <span class="visually-hidden">Toggle Dropdown</span>
+                        </button>
+                        <ul  class="dropdown-menu" >
+                            <li >
+                              <a class="dropdown-item" role="button" ><i ></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--button class="btn btn-outline-success me-2" type="button">Main button</button/ -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!-- Lista do Menu Principal -->
+                    <li class="nav-item">
+                        <a  aria-current="page" role="button" >Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a role="button" id="navbarDropdownCadastros" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Cadastros
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownCadastros">
+                          <li><a role="button"><i class="bi bi-activity"></i> </a></li>
+                          <li><a  role="button"><i class="bi bi-toggle-off"></i> </a></li>
+                          <li><a role="button"><i class="bi bi-building"></i> Cidades</a></li>
+                          <li><a role="button"><i class="bi bi-emoji-sunglasses"></i> Feriados</a></li>
+                          <li><a role="button"><i class="bi bi-graph-up-arrow"></i> }</a></li>
+                          <li><a role="button"><i class="bi bi-boxes"></i> </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a role="button" ><i class="bi bi-check-all"></i> Tipos de </a></li>
+                            <li><a role="button" ><i class="bi bi-question-square"></i> Tipos de </a></li>
+                            <li><a role="button" ><i class="bi bi-files"></i> Tipos de </a></li>
+                            <li><a role="button" ><i class="bi bi-window-stack"></i> Tipos de </a></li>
+                            <li><a role="button" ><i class="bi bi-bar-chart-steps"></i> Tipos de </a></li>
+                            <li><a role="button" ><i class="bi bi-list-ol"></i> Tipos de</a></li>
+                            <li><a role="button" ><i class="bi bi-folder-check"></i> Tipos de </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a  role="button" id="navbarDropdownGestao">
+                            Gestão
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownGestao">
+                            <li><a role="button"><i class="bi bi-activity"></i> </a></li>
+                            <li><a ><i class="bi bi-list-check"></i> </a></li>
+                            <li><a role="button"><i class="bi bi-diagram-2"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a role="button" id="navbarDropdownRelatorios"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Relatórios
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdownRelatorios">
+                        <li>
+                          <a role="button" ><i class="bi bi-file-person"></i> Força de Trabalho - Servidor</a>
+                        </li>
+                        <li>
+                          <a role="button" ><i class="bi bi-diagram-3-fill"></i> Força de Trabalho - Área</a>
+                        </li>
+  <!--                           <li class="nav-item dropdown dropend">
+                            <a [class]="menuItemClass('nav-link dropdown-toggle', ['relatorios', 'produtividade'])" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Força de Trabalho
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a [class]="menuItemClass('dropdown-item', ['relatorios', 'produtividade'])" role="button" (click)="navigate({route: ['relatorios', 'produtividade']}, {root: true})"><i class="bi bi-graph-up-arrow"></i> Produtividade</a>
+                              </li>
+                            </ul>
+                          </li> -->
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a role="button" id="navbarDropdownConfiguracoes" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Configurações
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownConfiguracoes">
+                            <li><a role="button" ><i class="bi bi-gear"></i> Preferências</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a role="button" ><i class="bi bi-bookmark-heart"></i></a></li>
+                            <li><a role="button"><i class="fa-unity fab"></i> </a></li>
+                            <li><a role="button" ><i class="bi bi-people"></i></a></li>
+                            <li><a role="button"><i class="bi bi-fingerprint"></i> Perfis</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a role="button">Sobre</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-outline-warning ms-2 d-none d-md-block"  data-bs-toggle="tooltip" data-bs-placement="top" title="Suporte Petrvs">
+                    <i class="bi bi-headset"></i>
+                </button>
+                <div idth="25" class="spinner-border spinner-border-sm m-0 ms-2" role="status">
+                    <span class="visually-hidden"></span>
+                </div>
+                <form class="d-flex m-0"> <!-- Identificação do Servidor -->
+                    <div class="input-group mx-3">
+                        <span class="input-group-text" id="basic-addon1"> <!-- Hora da Unidade -->
+                            <i class="bi bi-clock me-2"></i>
+                            <div class="spinner-border spinner-border-sm  me-2" role="status">
+                                <span class="visually-hidden"></span>
+                            </div>
+                            Hora
+                        </span>
+                        <input type="text" class="form-control" value="- Sem unidade -" disabled>
+                        <select class="form-select" >
+                            <option >Unidde Sigla</option>
+                        </select>
+                        <button class="btn btn-outline-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            UsuarioNome
+                            <img [src]="imgCacau1" class="rounded-circle profile-photo" width="25" height="25">
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item" role="button" ><i class="bi bi-person-circle"></i> Perfil</a></li>
+                          <li><a class="dropdown-item" role="button" ><i class="bi bi-gear"></i> Preferências</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" role="button" ><i class="bi bi-arrow-bar-right"></i> Sair</a></li>
+                        </ul>
+                    </div>
+                    <button type="button" lass="btn btn-outline-danger" role="button" >Login</button>
+                    <button class="btn btn-outline-secondary" type="button" >
+                        <i data-bs-toggle="tooltip" data-bs-placement="top" ></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container app-container mt-2" >
+
+    </div>
+  </div>
+  </div>

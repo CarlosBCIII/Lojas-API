@@ -1,232 +1,79 @@
 
-<div *ngIf="div1">
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+
+ <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <!-- Container wrapper -->
     <div class="container">
-        <!-- Navbar brand -->
-        <a class="navbar-brand" href="#"><i class="fab fa-linkedin fa-2x"></i></a>
-        <!-- Search form -->
-        <form class="input-group" style="width: 400px">
-            <input type="search" class="form-control" placeholder="Type query" aria-label="Search" />
-            <button class="btn btn-outline-light" type="button" data-mdb-ripple-color="dark" style="padding: .45rem 1.5rem .35rem;">
-        Procurar
-      </button>
-        </form>
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="#"><img [src]="imgCacau1" class="" height="50"
+        alt="" loading="lazy" /></a>
+      <!-- Search form -->
+      <form class="input-group" style="width: 300px">
+        <input type="search" class="form-control" placeholder="Insira a pesquisa" aria-label="Search" />
+        <button class="btn btn-outline-light" type="button" data-ripple-color="dark"
+          style="padding: .45rem 1.5rem .35rem;">
+          Pesquisar
+        </button>
+      </form>
 
-        <!-- Toggle button -->
-        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <fa-icon [icon]="faHome"></fa-icon>
-    </button>
-
-        <!-- Collapsible wrapper -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left links -->
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active d-flex flex-column text-center" aria-current="page" href="#"><fa-icon class="iconNav" [icon]="faHome"></fa-icon><span class="small">Colaborador</span></a><!--<fa-icon [icon]="faHome"></fa-icon>-->
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link d-flex flex-column text-center" aria-current="page" href="#"><i class="fas fa-user-friends fa-lg"></i><span class="small">Caixa</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link d-flex flex-column text-center" aria-current="page" href="#"><i class="fas fa-briefcase fa-lg"></i><span class="small">Meta</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link d-flex flex-column text-center" aria-current="page" href="#"><i class="fas fa-comment-dots fa-lg"></i><span class="small">Outros</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link d-flex flex-column text-center" aria-current="page" href="#"><i class="fas fa-bell fa-lg"></i><span class="small">Notifications</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded-circle" height="30" alt="" loading="lazy" />
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">My profile</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <!-- Left links -->
-        </div>
-        <!-- Collapsible wrapper -->
-    </div>
-    <!-- Container wrapper -->
-</nav>
-<!-- Navbar -->
-</div>
-<p>This dropdown uses customized default values.</p>
-<br>
-<br>
-<br>
-<hr>
-<div *ngIf="div2">
-<div ngbDropdown>
-	<button type="button" class="btn btn-outline-primary" id="dropdownConfig" ngbDropdownToggle>Toggle  <fa-icon [icon]="faHome"></fa-icon></button>
-	<div ngbDropdownMenu aria-labelledby="dropdownConfig">
-		<button ngbDropdownItem>Action - 1</button>
-		<button ngbDropdownItem>Another Action</button>
-		<button ngbDropdownItem>Something else is here</button>
-	</div>
-</div>
-</div>
-<br>
-<br>
-<br>
-<hr>
-
-<div *ngIf="div3">
-<div class="d-flex justify-content-between">
-    <div>
-        <ul ngbNav #nav="ngbNav" class="nav-tabs">
-
-            <li ngbNavItem>
-                <a ngbNavLink>Colaborador <fa-icon  [icon]="faHome"></fa-icon></a>
-                <ng-template ngbNavContent>
-                    <p>These navs will always stay in DOM and have no roles</p>
-                </ng-template>
-            </li>
-            <li ngbNavItem>
-                <a ngbNavLink>Caixa</a>
-                <ng-template ngbNavContent>
-                    <p>Because default values have been customized in the config</p>
-                </ng-template>
-            </li>
-            <li ngbNavItem>
-                <a ngbNavLink>Meta <fa-icon [icon]="faHome"></fa-icon></a>
-                <ng-template ngbNavContent>
-                    <p>These navs will always stay in DOM and have no roles</p>
-                </ng-template>
-            </li>
-            <li ngbNavItem>
-                <a ngbNavLink>Outros <fa-icon [icon]="faHome"></fa-icon></a>
-                <ng-template ngbNavContent>
-                    <p>These navs will always stay in DOM and have no roles</p>
-                </ng-template>
-            </li>
-
-
-
-
-
-        </ul>
-    </div>
-    <div class="login-prf d-flex align-items-center">
-        <div class="info-login mr-2">
-            <div id="nomeLogin">nome</div>
-            <div id="emailLogin">mail</div>
-        </div>
-        <div class="foto-login d-flex align-items-center justify-content-center">
-            <img [src]="imgCacau1" alt="Avatar" id="imgLogin" class="rounded-circle">
-        </div>
-    </div>
-</div>
-
-</div>
-
-<div *ngIf="div4">
-
-<br>
-<br>
-<br>
-<!--
-<br>
-<br>
-<br>
-<p><ngb-progressbar type="success" textType="white" [value]="25" [showValue]="true"></ngb-progressbar></p>
--->
-<hr>
-<div id="loading-div-background" *ngIf="showLoad">
-  <div id="loading-div" class="ui-corner-all">
-    <fa-icon id="faSpinner" [icon]="faSpinner" size="6x" animation="spin"></fa-icon>
-  </div>
-</div>
-
-<div class="d-flex justify-content-between">
-
-        <div class="logo-prf">
-            <img [src]="imgCacau1" alt="" id="logoConjuntaTopo" />AQUI
-        </div>
-        <div class="login-prf d-flex align-items-center">
-            <div class="info-login mr-2">
-                <div id="nomeLogin">nome</div>
-                <div id="emailLogin">mail</div>
-            </div>
-            <div class="foto-login d-flex align-items-center justify-content-center">
-                <img [src]="imgCacau1" alt="Avatar" id="imgLogin" class="rounded-circle">
-            </div>
-        </div>
-
-</div>
-</div>
-
-<div *ngIf="div5">
-
-<br><br>
-<hr>
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-              <img [src] ="imgCacau1" alt="Bootstrap" width="60" height="48">
-            </a>
-          </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Colaborador</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Caixa</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Meta
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-
-
+      <!-- Toggle button -->
+      <div class="mt-sm-3">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+          </button>
       </div>
 
-
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Left links -->
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 list-group"><!--<i class="fas fa-home iconNav"></i>-->
+          <li class="nav-item ">
+            <a class="nav-link active d-flex flex-column text-center" aria-current="page" href="#">
+              <i class="fa-brands fa-superpowers iconNav"></i>
+              <span class="small">Administrador</span></a><!--<fa-icon [icon]="faHome"></fa-icon>-->
+          </li>
+          <li class="nav-item flex-fill">
+            <a class="nav-link active d-flex flex-column text-center" aria-current="page" href="#">
+              <fa-icon class="fa-solid fa-user iconNav"></fa-icon>
+              <span class="small">Colaborador</span></a><!--<fa-icon [icon]="faHome"></fa-icon>-->
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link d-flex flex-column text-center" aria-current="page" href="#">
+              <i class="fa-solid fa-cash-register iconNav"></i><span class="small">Caixa</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link d-flex flex-column text-center" aria-current="page" href="#">
+              <i class="fa-solid fa-bullseye iconNav"></i><span class="small">Meta</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex flex-column text-center" aria-current="page" href="#"><i
+                class="fas fa-comment-dots iconNav"></i><span class="small">Outros</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex flex-column text-center" aria-current="page" href="#"><i
+                class="fas fa-bell iconNav"></i><span class="small">Notificações</span></a>
+          </li>
+          <li class="nav-item dropdown mx-auto">
+            <a class="nav-link dropdown-toggle d-flex align-items-center iconNav" href="#" id="navbarDropdownMenuLink"
+              role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img [src]="imgCacau1" class="rounded-circle" height="50"
+                alt="" loading="lazy" />
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Meu cadastro</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Lot</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
     </div>
-
-    <div class="login-prf d-flex align-items-center">
-        <div class="info-login mr-2">
-            <div id="nomeLogin">nome</div>
-            <div id="emailLogin">mail</div>
-        </div>
-        <div class="foto-login d-flex align-items-center justify-content-center">
-            <img [src]="imgCacau1" alt="Avatar" id="imgLogin" class="rounded-circle">
-        </div>
-    </div>
-
+    <!-- Container wrapper -->
   </nav>
-</div>
+  <!-- Navbar -->
 
-<button type="button" class="btn btn-outline-primary" (click)="muda1()">1</button>
-<button type="button" class="btn btn-outline-primary"(click)="muda2()">2</button>
-<button type="button" class="btn btn-outline-primary" (click)="muda3()">3</button>
-<button type="button" class="btn btn-outline-primary" (click)="muda4()">4</button>
-<button type="button" class="btn btn-outline-primary" (click)="muda5()">5</button>
+  <router-outlet></router-outlet>
 
-<router-outlet></router-outlet>

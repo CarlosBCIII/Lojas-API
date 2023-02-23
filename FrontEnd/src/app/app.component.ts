@@ -1,8 +1,8 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit,Input } from '@angular/core';
 //import { NgbDropdownConfig, NgbDropdownModule,NgbNavConfig,NgbNavModule,NgbProgressbarModule  } from '@ng-bootstrap/ng-bootstrap';
-import { faHome,faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 import { Event, NavigationCancel,NavigationEnd,NavigationError,NavigationStart, Router } from '@angular/router';
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import * as moment from 'moment'
 
@@ -11,16 +11,15 @@ import * as moment from 'moment'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
+
+
 export class AppComponent implements OnInit {
   title = 'LojasWEB';
-  faHome = faHome;
-  faSpinner = faSpinner;
+  
   showLoad = true;
-  div1 = false;
-  div2 = false;
-  div3 = false;
-  div4 = false;
-  div5 = false;
+  div1 = true;
+
+
 
   imgCacau1: string;
   /**
@@ -57,45 +56,6 @@ export class AppComponent implements OnInit {
     }
   }
 
-  muda1() {
-    this.div1 = true;
-    this.div2 = false;
-    this.div3 = false;
-    this.div4 = false;
-    this.div5 = false;
-  }
-
-  muda2() {
-    this.div1 = false;
-    this.div2 = true;
-    this.div3 = false;
-    this.div4 = false;
-    this.div5 = false;
-  }
-
-  muda3() {
-    this.div1 = false;
-    this.div2 = false;
-    this.div3 = true;
-    this.div4 = false;
-    this.div5 = false;
-  }
-
-  muda4() {
-    this.div1 = false;
-    this.div2 = false;
-    this.div3 = false;
-    this.div4 = true;
-    this.div5 = false;
-  }
-
-  muda5() {
-    this.div1 = false;
-    this.div2 = false;
-    this.div3 = false;
-    this.div4 = false;
-    this.div5 = true;
-  }
 
   ngOnInit() {}
 }

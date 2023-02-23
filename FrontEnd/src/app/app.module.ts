@@ -3,12 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgbModule,NgbDropdownConfig, NgbDropdownModule,NgbNavConfig,NgbNavModule,NgbProgressbarModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule,NgbDropdownConfig, NgbDropdownModule,NgbNavConfig,NgbNavModule,NgbProgressbarModule,NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule,FaIconLibrary } from '@fortawesome/angular-fontawesome';
 
-import { CadastroEmpregadoComponent } from './cadastro-empregado/cadastro-empregado.component';
-import { CaixaDiarioComponent } from './caixa-diario/caixa-diario.component';
+import { CadastroEmpregadoComponent } from './pages/cadastro-empregado/cadastro-empregado.component';
+import { CaixaDiarioComponent } from './pages/caixa-diario/caixa-diario.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { MetasComponent } from './pages/metas/metas.component';
+import { DespesasComponent } from './pages/despesas/despesas.component';
 
+//import { bootstrap } from 'bootstrap'
+//import { createPopper } from '@popperjs/core';
 
 
 
@@ -17,6 +22,10 @@ import { CaixaDiarioComponent } from './caixa-diario/caixa-diario.component';
     AppComponent,
     CadastroEmpregadoComponent,
     CaixaDiarioComponent,
+    AdminComponent,
+    MetasComponent,
+    DespesasComponent,
+
 
   ],
   imports: [
@@ -25,7 +34,13 @@ import { CaixaDiarioComponent } from './caixa-diario/caixa-diario.component';
     NgbModule,
     FontAwesomeModule,
     NgbProgressbarModule,
+    NgbDropdownModule,
+    NgbNavModule,
+
+
+
   ],
+  exports:[],
   providers: [],
   bootstrap: [AppComponent]
 })
