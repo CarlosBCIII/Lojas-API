@@ -1,87 +1,87 @@
 /* eslint-disable no-unused-vars */
-// responsável pela lógica do CRUD empregados
+// responsável pela lógica do CRUD usuarios
 
 const db = require('../config/database')
 
 //Metodo para criar registro colaborador
-exports.createEmpregados = async(req, res) => {
-        const { nome, cargo, salario, inicio_contrato, final_contrato, registro } = req.body;
+exports.createUsuarios = async(req, res) => {
+        const { nome, cargo, salario, inicio_contrato, final_contrato, registro,meta_id,tipo_usuario_id } = req.body;
         const { rows } = await db.query(
-            "INSERT INTO empregados(nome,cargo,salario,inicio_contrato,final_contrato,registro) VALUES ($1,$2,$3,$4,$5,$6)", [nome, cargo, salario, inicio_contrato, final_contrato, registro]);
+            "INSERT INTO usuarios(nome,cargo,salario,inicio_contrato,final_contrato,registro,meta_id,tipo_usuario_id) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)", [nome, cargo, salario, inicio_contrato, final_contrato, registro,meta_id,tipo_usuario_id]);
         res.status(201).send({
             message: 'Colaborador incluido com sucesso.',
             body: {
-                empregados: { nome, cargo, salario, inicio_contrato, final_contrato, registro },
+                usuarios: { nome, cargo, salario, inicio_contrato, final_contrato, registro,meta_id,tipo_usuario_id },
             },
 
         })
     }
     //Metodo para listar todos registros colaboradores
-exports.listaEmpregados = async(req, res) => {
+exports.listaUsuarios = async(req, res) => {
 
-        const response = await db.query('SELECT * FROM empregados ORDER BY nome ASC');
+        const response = await db.query('SELECT * FROM usuarios ORDER BY nome ASC');
 
         res.status(200).send(response.rows)
     }
     //Metodo para buscar registro colaborador pelo Codigo
-exports.listaEmpregadosID = async(req, res) => {
+exports.listaUsuariosID = async(req, res) => {
 
-        const codigoColaborador = req.params.codigo
+        const codigoUsuario = req.params.codigo
 
-        const response = await db.query('SELECT * from empregados WHERE codigo= $1', [codigoColaborador])
+        const response = await db.query('SELECT * from usuarios WHERE codigo= $1', [codigoUsuario])
 
         res.status(200).send(response.rows)
     }
     //Metodo para buscar registro colaborador pelo registro
-exports.listaEmpregadosRegistro = async(req, res) => {
+exports.listaUsuariosRegistro = async(req, res) => {
 
-        const registroColaborador = req.params.registro
+        const registroUsuario = req.params.registro
 
-        const response = await db.query('SELECT * from empregados WHERE registro= $1', [registroColaborador])
+        const response = await db.query('SELECT * from usuarios WHERE registro= $1', [registroUsuario])
 
         res.status(200).send(response.rows)
     }
     //Metodo para buscar registro colaborador por nome
-exports.listaEmpregadosNome = async(req, res) => {
+exports.listaUsuariosNome = async(req, res) => {
 
-        const nomeColaborador = '%' + req.params.nome + '%' // % para buscar por parte do nome
+        const nomeUsuario = '%' + req.params.nome + '%' // % para buscar por parte do nome
 
-        const response = await db.query('SELECT * from empregados WHERE nome ILIKE $1 ', [nomeColaborador])
+        const response = await db.query('SELECT * from usuarios WHERE nome ILIKE $1 ', [nomeUsuario])
 
         res.status(200).send(response.rows)
     }
     //Metodo para atualizar registro colaborador por codigo
-exports.atualizaEmpregadosCodigo = async(req, res) => {
-        const empregadoCodigo = req.params.codigo
-        const { nome, cargo, salario, inicio_contrato, final_contrato, registro } = req.body;
-        const response = await db.query(`UPDATE empregados SET nome = $1, cargo = $2, salario = $3, inicio_contrato = $4, final_contrato = $5, registro = $6 WHERE codigo = $7`, [nome, cargo, salario, inicio_contrato, final_contrato, registro, empregadoCodigo])
+exports.atualizaUsuariosCodigo = async(req, res) => {
+        const usuarioCodigo = req.params.codigo
+        const { nome, cargo, salario, inicio_contrato, final_contrato, registro,meta_id,tipo_usuario_id } = req.body;
+        const response = await db.query(`UPDATE usuarios SET nome = $1, cargo = $2, salario = $3, inicio_contrato = $4, final_contrato = $5, registro = $6, meta_id= $7, tipo_usuario_id = $8 WHERE codigo = $9`, [nome, cargo, salario, inicio_contrato, final_contrato, registro,meta_id,tipo_usuario_id,usuarioCodigo])
 
         res.status(200).send({ message: 'Atualização efetuada com sucesso' })
 
     }
     //Metodo para atualizar registro colaborador por registro
-exports.atualizaEmpregadosRegistro = async(req, res) => {
-        const empregadoRegistro = req.params.registro
+exports.atualizaUsuariosRegistro = async(req, res) => {
+        const usuarioRegistro = req.params.registro
         const { nome, cargo, salario, inicio_contrato, final_contrato, registro } = req.body;
-        const response = await db.query(`UPDATE empregados SET nome = $1, cargo = $2, salario = $3, inicio_contrato = $4, final_contrato = $5 WHERE registro = $6`, [nome, cargo, salario, inicio_contrato, final_contrato, empregadoRegistro])
+        const response = await db.query(`UPDATE usuarios SET nome = $1, cargo = $2, salario = $3, inicio_contrato = $4, final_contrato = $5 WHERE registro = $6`, [nome, cargo, salario, inicio_contrato, final_contrato, usuarioRegistro])
 
         res.status(200).send({ message: 'Atualização efetuada com sucesso' })
 
     }
     //Metodo para deletar registro colaborador por codigo
-exports.deletaEmpregadosCodigo = async(req, res) => {
-        const empregadoCodigo = req.params.codigo
+exports.deletaUsuariosCodigo = async(req, res) => {
+        const usuarioCodigo = req.params.codigo
 
-        await db.query('DELETE FROM empregados WHERE codigo =$1', [empregadoCodigo])
+        await db.query('DELETE FROM usuarios WHERE codigo =$1', [usuarioCodigo])
 
         res.status(200).send({ message: 'Colaborador deletado com sucesso' })
 
     }
     //Metodo para deletar registro colaborador por registro
-exports.deletaEmpregadosRegistro = async(req, res) => {
-    const empregadoRegistro = req.params.registro
+exports.deletaUsuariosRegistro = async(req, res) => {
+    const usuarioRegistro = req.params.registro
 
-    await db.query('DELETE FROM empregados WHERE registro =$1', [empregadoRegistro])
+    await db.query('DELETE FROM usuarios WHERE registro =$1', [usuarioRegistro])
 
     res.status(200).send({ message: 'Colaborador deletado com sucesso' })
 }
