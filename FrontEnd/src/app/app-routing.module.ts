@@ -7,9 +7,12 @@ import { CaixaDiarioComponent } from './pages/caixa-diario/caixa-diario.componen
 
 const routes: Routes = [
 
-  {path:'employees/emp', component: CadastroEmpregadoComponent},
+  {path:'usuario/cadastro', component: CadastroEmpregadoComponent},
   {path:'caixa', component: CaixaDiarioComponent},
-  {path:'', component:AppComponent}
+  //{path:'', component:AppComponent}
+  /*{path:'', redirectTo:'usuario', pathMatch: 'full'},
+  {path:'usuario',
+    loadChildren:()=> import('./pages/pages.routes').then( routes =>routes.PagesRoutes)}*/
 
 ];
 

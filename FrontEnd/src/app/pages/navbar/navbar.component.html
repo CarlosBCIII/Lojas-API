@@ -1,0 +1,76 @@
+
+
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="#"><img [src]="imgCacau1" class="" height="50"
+      alt="" loading="lazy" /></a>
+    <!-- Search form -->
+    <form class="input-group" style="width: 300px">
+      <input type="search" class="form-control" placeholder="Insira a pesquisa" aria-label="Search" />
+      <button class="btn btn-outline-light" type="button" data-ripple-color="dark"
+        style="padding: .45rem 1.5rem .35rem;">
+        Pesquisar
+      </button>
+    </form>
+
+    <!-- Toggle button -->
+    <div class="mt-sm-3">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Left links -->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 list-group"><!--<i class="fas fa-home iconNav"></i>-->
+        <li class="nav-item ">
+          <a class="nav-link active d-flex flex-column text-center" aria-current="page" href="#">
+            <i class="fa-brands fa-superpowers iconNav"></i>
+            <span class="small">Administrador</span></a><!--<fa-icon [icon]="faHome"></fa-icon>-->
+        </li>
+        <li class="nav-item flex-fill">
+          <a class="nav-link active d-flex flex-column text-center" aria-current="page" href="#">
+            <fa-icon class="fa-solid fa-user iconNav"></fa-icon>
+            <span class="small">Colaborador</span></a><!--<fa-icon [icon]="faHome"></fa-icon>-->
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link d-flex flex-column text-center" aria-current="page" href="#">
+            <i class="fa-solid fa-cash-register iconNav"></i><span class="small">Caixa</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link d-flex flex-column text-center" aria-current="page" href="#">
+            <i class="fa-solid fa-bullseye iconNav"></i><span class="small">Meta</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex flex-column text-center" aria-current="page" href="#"><i
+              class="fas fa-comment-dots iconNav"></i><span class="small">Outros</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex flex-column text-center" aria-current="page" href="#"><i
+              class="fas fa-bell iconNav"></i><span class="small">Notificações</span></a>
+        </li>
+        <li class="nav-item dropdown mx-auto">
+          <a class="nav-link dropdown-toggle d-flex align-items-center iconNav" href="#" id="navbarDropdownMenuLink"
+            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img [src]="imgCacau1" class="rounded-circle" height="50"
+              alt="" loading="lazy" />
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Meu cadastro</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Lot</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->

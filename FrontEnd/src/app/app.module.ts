@@ -11,6 +11,8 @@ import { CaixaDiarioComponent } from './pages/caixa-diario/caixa-diario.componen
 import { AdminComponent } from './pages/admin/admin.component';
 import { MetasComponent } from './pages/metas/metas.component';
 import { DespesasComponent } from './pages/despesas/despesas.component';
+import { NavbarComponent } from './pages/navbar/navbar.component';
+import { HomeComponent } from './pages/home/home.component';
 
 //import { bootstrap } from 'bootstrap'
 //import { createPopper } from '@popperjs/core';
@@ -25,6 +27,8 @@ import { DespesasComponent } from './pages/despesas/despesas.component';
     AdminComponent,
     MetasComponent,
     DespesasComponent,
+    NavbarComponent,
+    HomeComponent,
 
 
   ],

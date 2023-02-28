@@ -1,2 +1,5 @@
-# Lojas-API
-API BACK-END...
+# LojasWEB
+API BACK-END Node + Express...
+Front Angular
+BD Postgres
+

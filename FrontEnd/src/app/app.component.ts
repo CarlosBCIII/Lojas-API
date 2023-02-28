@@ -15,20 +15,20 @@ import * as moment from 'moment'
 
 export class AppComponent implements OnInit {
   title = 'LojasWEB';
-  
+
   showLoad = true;
   div1 = true;
 
 
 
-  imgCacau1: string;
+  
   /**
    *
    *
    */
 
   constructor(private router: Router) {
-    this.imgCacau1 = '../assets/imagens/cs.jpeg';
+
 
     this.router.events.subscribe((event: Event) => {
       this.navigationInterceptor(event);
