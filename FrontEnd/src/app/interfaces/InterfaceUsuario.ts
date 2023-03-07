@@ -1,6 +1,6 @@
 import { DatePipe, DecimalPipe } from "@angular/common";
 
-export interface Usuarios{
+export interface UsuarioInterface{
 
   nome:string;
   id: number;
@@ -14,7 +14,7 @@ export interface Usuarios{
 
 };
 
-export interface FormadePagamento{
+export interface FormadePagamentoInterface{
 
   id: number;
   nome:string;

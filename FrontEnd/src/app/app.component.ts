@@ -2,7 +2,6 @@ import { Component,OnInit,Input } from '@angular/core';
 //import { NgbDropdownConfig, NgbDropdownModule,NgbNavConfig,NgbNavModule,NgbProgressbarModule  } from '@ng-bootstrap/ng-bootstrap';
 
 import { Event, NavigationCancel,NavigationEnd,NavigationError,NavigationStart, Router } from '@angular/router';
-import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import * as moment from 'moment'
 
@@ -21,7 +20,7 @@ export class AppComponent implements OnInit {
 
 
 
-  
+
   /**
    *
    *
