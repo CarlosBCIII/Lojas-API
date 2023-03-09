@@ -6,38 +6,41 @@
         <form [formGroup]="cadastroForm" class="row gy-2 gx-3 align-items-center form-items" #formDir="ngForm">
 
         <!--<form [formGroup]="cadastroForm" class="row gy-2 gx-3 align-items-center form-items"
-         (ngSubmit)="cadastroEmpregadoSubmit()" #formDir="ngForm">
+        (ngSubmit)="cadastroEmpregadoSubmit()" #formDir="ngForm">
           <div class="row">-->
           <!--<div class="form-group col-lg-2">
             <label for="inputId">ID:</label>
             <input type="number" class="form-control form-items" id="inputId" name="imputId" placeholder="ID" />
           </div>-->
-          <div class="form-group col-lg-10">
+          <div class="form-group col-lg-7">
             <label for="inputNome">Nome:</label>
             <input type="text" class="form-control" id="nome" name="nome" formControlName="nome" placeholder="Nome" />
           </div>
-
+          <div class="form-group col-lg-5">
+            <label for="inputNome">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" formControlName="email" placeholder="email" />
+          </div>
 
 
           <!--<div class="row mt-3">-->
           <div class="form-group col-lg-4">
             <label for="inputAddress">Salario:</label><!--MASCARAS ????-->
-            <input type="text" class="form-control" id="salario" name="salario" formControlName="salario" placeholder="" mask="separator.2" thousandSeparator="." prefix="R$ "/>
+            <input type="text" class="form-control" id="salario" name="salario" formControlName="salario" placeholder="" mask="separator.2" thousandSeparator="." prefix="R$ " />
           </div>
           <div class="form-group col-lg-4">
             <label for="inputAddress2">Inicio do contrato:</label>
-            <input type="date" class="form-control" id="inicioC" name="inicioC" formControlName="inicioC" placeholder="" />
+            <input type="date" class="form-control" id="inicioContrato" name="inicioContrato" formControlName="inicioContrato" placeholder="" />
           </div>
 
           <div class="form-group col-lg-4">
             <label for="inputCity">Final do contrato:</label>
-            <input type="date" class="form-control" id="finalC" name="finalC" formControlName="finalC" />
+            <input type="date" class="form-control" id="finalContrato" name="finalContrato" formControlName="finalContrato" />
           </div>
 
           <!--<div class="row mt-3">-->
           <div class="form-group col-lg-4">
             <label for="inputState">Meta</label>
-            <input type="text" class="form-control" id="meta" name="meta" formControlName="meta"/>
+            <input type="text" class="form-control" id="metaID" name="metaID" formControlName="metaID"/>
           </div>
 
           <div class="col-lg-8 mt-lg-4">
@@ -53,11 +56,11 @@
           <!--<div class="row mt-3">-->
           <div class="form-group col-lg-4">
             <label for="inputCity">Nível de acesso:</label>
-            <input type="text" class="form-control" id="nivelUsuario" name="nivelUsuario" formControlName="nivelUsuario"/>
+            <input type="text" class="form-control" id="tipo" name="tipo" formControlName="tipo"/>
           </div>
           <div class="col-lg-8 mt-lg-4">
             <div class="form-group form-check">
-              <input class="form-check-input form-control" type="checkbox" value="" id="usuarioAtivo" name="usuarioAtivo" formControlName="usuarioAtivo">
+              <input class="form-check-input form-control" type="checkbox" value="" id="ativo" name="ativo" formControlName="ativo">
               <label class="form-check-label" for="usuarioAtivo">
                 Usuário Ativo
               </label>

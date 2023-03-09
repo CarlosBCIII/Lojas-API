@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -17,7 +18,12 @@ import { DespesasComponent } from './pages/despesas/despesas.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SidebarComponent } from './pages/sidebar/sidebar.component';
-//import { provideNgxMask } from 'ngx-mask/lib/ngx-mask.providers';
+import { LoginComponent } from './pages/login/login.component';
+
+import { LoginService } from './pages/login/login.service';
+import { CadastroempregadoService } from './pages/cadastro-empregado/cadastroempregado.service';
+import { OauthComponent } from './pages/oauth/oauth.component';
+
 
 
 //import { bootstrap } from 'bootstrap'
@@ -36,9 +42,8 @@ import { SidebarComponent } from './pages/sidebar/sidebar.component';
     NavbarComponent,
     HomeComponent,
     SidebarComponent,
-
-
-
+    LoginComponent,
+    OauthComponent,
 
   ],
   imports: [
@@ -54,7 +59,7 @@ import { SidebarComponent } from './pages/sidebar/sidebar.component';
 
   ],
   exports:[],
-  providers: [provideNgxMask()],
+  providers: [provideNgxMask(), LoginService,CadastroempregadoService],
   bootstrap: [AppComponent]
 })
 

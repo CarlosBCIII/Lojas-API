@@ -2,15 +2,16 @@ import { DatePipe, DecimalPipe } from "@angular/common";
 
 export interface UsuarioInterface{
 
-  nome:string;
-  id: number;
-  salario:DecimalPipe;
-  inicioContrato:DatePipe;
-  finalContrato:DatePipe;
-  metaID:number
-  metaAtiva:boolean;
-  tipo: string;
-  ativo:boolean;
+  id?: number,
+  nome:string,
+  email:string,
+  salario:number,
+  inicioContrato:string,
+  finalContrato?:string,
+  metaID:string,
+  metaAtiva:boolean,
+  tipo: string,
+  ativo:boolean
 
 };
 

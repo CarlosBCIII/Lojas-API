@@ -1,16 +1,16 @@
 import { DatePipe, DecimalPipe } from "@angular/common";
-import { UsuarioInterface } from "src/app/interfaces/InterfaceUsuario";
+import { UsuarioInterface } from "src/app/interfaces/interface-usuario";
 
-export class UsuarioClass implements UsuarioInterface{
+/**export class UsuarioClass {
 
-  nome!:string;
-  id!: number;
-  salario!:DecimalPipe;
-  inicioContrato!:DatePipe;
-  finalContrato!:DatePipe;
-  metaID!:number
-  metaAtiva!:boolean;
-  tipo!: string;
-  ativo!:boolean;
+  nome:string;
+  id?: number;
+  salario:number;
+  inicioContrato:Date;
+  finalContrato?:Date;
+  metaID:number
+  metaAtiva:boolean;
+  tipo: string;
+  ativo:boolean;
 
-};
+};*/
