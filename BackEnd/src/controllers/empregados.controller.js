@@ -5,16 +5,19 @@ const db = require('../config/database')
 
 //Metodo para criar registro colaborador
 exports.createUsuarios = async(req, res) => {
-        const { nome, cargo, salario, inicio_contrato, final_contrato, registro,meta_id,tipo_usuario_id } = req.body;
+        //const { nome, cargo, salario, inicio_contrato, final_contrato, registro,meta_id,tipo_usuario_id } = req.body;
+        const { nome, email, inicio_contrato } = req.body;
         const { rows } = await db.query(
-            "INSERT INTO usuarios(nome,cargo,salario,inicio_contrato,final_contrato,registro,meta_id,tipo_usuario_id) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)", [nome, cargo, salario, inicio_contrato, final_contrato, registro,meta_id,tipo_usuario_id]);
-        res.status(201).send({
-            message: 'Colaborador incluido com sucesso.',
-            body: {
-                usuarios: { nome, cargo, salario, inicio_contrato, final_contrato, registro,meta_id,tipo_usuario_id },
-            },
+          //"INSERT INTO usuarios(nome,cargo,salario,inicio_contrato,final_contrato,registro,meta_id,tipo_usuario_id) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)", [nome, cargo, salario, inicio_contrato, final_contrato, registro,meta_id,tipo_usuario_id]);
+          "INSERT INTO usuarios(nome,email,inicio_contrato) VALUES ($1,$2,$3)", [nome, email, inicio_contrato]);
+      res.status(201).send({
+          message: 'Colaborador incluido com sucesso.',
+          body: {
+              //usuarios: { nome, cargo, salario, inicio_contrato, final_contrato, registro,meta_id,tipo_usuario_id },
+              usuarios: { nome, email, inicio_contrato},
+          },
 
-        })
+      })
     }
     //Metodo para listar todos registros colaboradores
 exports.listaUsuarios = async(req, res) => {
@@ -85,3 +88,4 @@ exports.deletaUsuariosRegistro = async(req, res) => {
 
     res.status(200).send({ message: 'Colaborador deletado com sucesso' })
 }
+

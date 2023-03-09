@@ -4,6 +4,7 @@ const usuariosController = require('../controllers/empregados.controller')
 
 //==>Rota para criar colaborador'Colaborador':(POST):localhost:3000/api/employees
 
+//router.post('/employees', usuariosController.createUsuarios)
 router.post('/employees', usuariosController.createUsuarios)
 
 // Rota listr todos colaboradores :(GET):localhost:3000/api/employees
