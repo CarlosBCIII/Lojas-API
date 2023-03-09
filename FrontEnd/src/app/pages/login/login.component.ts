@@ -1,3 +1,4 @@
+import { Userlogin } from 'src/app/interfaces/userlogin';
 import { LoginService } from './login.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl,Validators} from '@angular/forms';
@@ -27,8 +28,10 @@ export class LoginComponent {
 
   enviarLogin(){
     const informa=this.loginForm.value
+
     //console.log('INforma=>',informa)
     this.loginService.gravaLogin(informa.email!,informa.password!,informa.lembrar!)
+
      /*this.loginService.checaLogin(informa.email!,informa.password!).subscribe(res=>console.log('cadastrado=>',res))/**.subscribe({
       next:(response:any)=>{
         console.log(response)
@@ -45,6 +48,7 @@ export class LoginComponent {
     const informa=this.loginForm.value
     //console.log('INforma=>',informa)
     this.loginService.checaLogin(informa.email!,informa.password!,informa.lembrar!)
+
      /*this.loginService.checaLogin(informa.email!,informa.password!).subscribe(res=>console.log('cadastrado=>',res))/**.subscribe({
       next:(response:any)=>{
         console.log(response)
@@ -60,8 +64,4 @@ export class LoginComponent {
 }
 
 
-//ID CLIENTE=> 435956396235-6sipf0onpmk8v64c89e7d9j6bk8ekjks.apps.googleusercontent.com
-//
-//Chave => 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
-//
-// Chave API=> AIzaSyAigmmeCwdWW_BPG-9Kw2W9DzhLnMljetc
+
